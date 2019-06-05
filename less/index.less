@@ -7,6 +7,15 @@
 	display: flex;
 }
 
+.section-block {
+	background-color: lightgrey;
+	width: 100%;
+	padding: 30px;
+	border-radius: 5px;
+	margin-top: @top-40;
+	margin-bottom: @top-40;
+}
+
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -93,12 +102,8 @@ header {
 }
 
 .top-container {
-	background-color: lightgrey;
-	width: 100%;
-	padding: 30px;
-	border-radius: 5px;
-	margin-top: @top-40;
-	margin-bottom: @top-40;
+
+	.section-block();
 
 	img {
 		width: 50%;
@@ -132,7 +137,6 @@ header {
 .middle-container {
 	h3 {
 		font-size: 25px;
-		// margin-bottom: 15px;
 	}
 
 	.icon-wrap {
@@ -156,6 +160,47 @@ header {
 			width: 20%;
 			padding: 10px;
 			margin-bottom: 20px;
+		}
+	}
+
+	.work-container {
+
+		.section-block();
+
+		.exp {
+			h4 {
+				text-decoration: underline;
+				letter-spacing: 1px;
+				margin: 15px 0 10px 0;
+			}
+
+			ul {
+				margin: 15px 0;
+
+				li {
+					padding: 5px 0;
+				}
+			}
+		}
+	}
+}
+
+.contact-container {
+	.flex-100();
+
+	.contact-icon {
+
+		display: flex;
+		justify-content: center;
+		
+		img {
+			width: 20%;
+		}
+
+		p {
+			display: flex;
+			align-items: center;
+			margin-left: 10px;
 		}
 	}
 }
