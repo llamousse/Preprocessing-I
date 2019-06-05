@@ -1,4 +1,13 @@
-// Is this working?
+@primary: black;
+@top-40: 40px;
+@top-20: 20px;
+
+.flex-100 {
+	width: 100%;
+	display: flex;
+}
+
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -55,4 +64,66 @@ table {
 
 html, body {
 	height: 100%;
+	font-family: 'Raleway';
 }
+
+.wrap-container {
+	margin: 0 7%;
+}
+
+header {
+	.flex-100();
+
+	nav {
+		margin-top: @top-40; 
+		.flex-100();
+		justify-content: flex-end;
+	}
+
+	a {
+		color: @primary;
+		text-decoration: none;
+		margin-left: 7%;
+	}
+	
+	a:hover {
+		color: red;
+	}
+}
+
+.top-container {
+	background-color: lightgrey;
+	width: 100%;
+	padding: 30px;
+	border-radius: 5px;
+	margin-top: @top-40;
+
+	img {
+		width: 50%;
+		border-radius: 5px;
+		margin-top: @top-20;
+		margin-bottom: @top-20;
+	}
+
+	h1 {
+		font-size: @top-40;
+	}
+
+	h2 {
+		margin-top: 15px;
+		font-size: @top-20;
+	}
+
+	.hr {
+		width: 100%;
+		border-bottom: 1px solid black;
+		margin-top: @top-20;
+		margin-bottom: @top-20;
+	}
+
+	p {
+		margin-bottom: @top-20;
+	}
+
+}
+

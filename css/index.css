@@ -1,3 +1,7 @@
+.flex-100 {
+  width: 100%;
+  display: flex;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -133,4 +137,55 @@ table {
 html,
 body {
   height: 100%;
+  font-family: 'Raleway';
+}
+.wrap-container {
+  margin: 0 7%;
+}
+header {
+  width: 100%;
+  display: flex;
+}
+header nav {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+header a {
+  color: black;
+  text-decoration: none;
+  margin-left: 7%;
+}
+header a:hover {
+  color: red;
+}
+.top-container {
+  background-color: lightgrey;
+  width: 100%;
+  padding: 30px;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+.top-container img {
+  width: 50%;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.top-container h1 {
+  font-size: 40px;
+}
+.top-container h2 {
+  margin-top: 15px;
+  font-size: 20px;
+}
+.top-container .hr {
+  width: 100%;
+  border-bottom: 1px solid black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.top-container p {
+  margin-bottom: 20px;
 }
