@@ -1,4 +1,23 @@
-// Is this working?
+@primary: black;
+@hover: maroon;
+@top-40: 40px;
+@top-20: 20px;
+
+.flex-100 {
+	width: 100%;
+	display: flex;
+}
+
+.section-block {
+	background-color: lightgrey;
+	width: 100%;
+	padding: 30px;
+	border-radius: 5px;
+	margin-top: @top-40;
+	margin-bottom: @top-40;
+}
+
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -54,6 +73,185 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-family: 'Raleway';
 }
 
+.wrap-container {
+	margin: 0 7%;
+
+	@media (min-width: 1012px) {
+		margin-left: 20%;
+		margin-right: 20%;
+	}
+}
+
+header {
+	.flex-100();
+
+	nav {
+		margin-top: @top-40; 
+		.flex-100();
+		justify-content: flex-end;
+	}
+
+	a {
+		color: @primary;
+		text-decoration: none;
+		margin-left: 7%;
+
+		&:hover {
+			color: @hover;
+		}
+	}
+	
+}
+
+.top-container {
+
+	.section-block();
+
+	img {
+		width: 50%;
+		border-radius: 5px;
+		margin-top: @top-20;
+		margin-bottom: @top-20;
+	}
+
+	h1 {
+		font-size: @top-40;
+	}
+
+	h2 {
+		margin-top: 15px;
+		font-size: @top-20;
+	}
+
+	.hr {
+		width: 100%;
+		border-bottom: 1px solid black;
+		margin-top: @top-20;
+		margin-bottom: @top-20;
+	}
+
+	p {
+		margin-bottom: @top-20;
+	}
+
+}
+
+.middle-container {
+	h3 {
+		font-size: 25px;
+	}
+
+	.icon-wrap {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	svg {
+		width: 8%;
+	}
+	
+	@media (max-width: 500px) {
+		h3 {
+			margin-bottom: 25px;
+		}
+		.icon-wrap {
+			display: table;
+		}
+
+		svg {
+			width: 20%;
+			padding: 10px;
+			margin-bottom: 20px;
+		}
+	}
+
+	.work-container {
+
+		.section-block();
+
+		.exp {
+			h4 {
+				text-decoration: underline;
+				letter-spacing: 1px;
+				margin: 15px 0 10px 0;
+			}
+
+			ul {
+				margin: 15px 0;
+
+				li {
+					padding: 5px 0;
+				}
+			}
+		}
+	}
+}
+
+.contact-container {
+	.flex-100();
+
+	@media (max-width: 500px) {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.contact-icon {
+
+		display: flex;
+		justify-content: center;
+		
+		a {
+			display: flex;
+			justify-content: center;
+			img {
+				width: 40%;
+			}
+		}
+
+		p {
+			display: flex;
+			align-items: center;
+			margin-left: 10px;
+
+			&:hover {
+				color: @hover;
+			}
+		}
+
+		@media (max-width: 500px) {
+			align-items: center;
+			
+			a {
+				img {
+					width: 40%;
+				}
+			}
+
+			p {
+				margin-left: 0;
+			}
+		}
+	}
+
+}
+
+footer {
+	background-color: lightgrey;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 50px;
+
+	p {
+		display: flex;
+		align-items: center;
+	}
+
+	@media (max-width: 500px) {
+		margin-top: 30px;
+	}
+}
